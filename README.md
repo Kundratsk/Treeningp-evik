@@ -5,7 +5,7 @@ File → Save All, seejärel:
 Tools → Command Line → Developer PowerShell
 
 
-#
+###
 powershell# 1. Lae paketid alla
 dotnet restore
 
@@ -17,6 +17,7 @@ dotnet build
 
 # 4. Loo andmebaas
 dotnet ef migrations add InitialCreate
+
 dotnet ef database update
 
 # 5. Käivita backend
