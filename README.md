@@ -22,7 +22,8 @@ Tools → Command Line → Developer PowerShell
 # 5. Käivita backend
 -dotnet run
 -Seejärel uues terminali aknas frontend:
--powershell# 6. Mine frontendi kausta
+-powershell 
+-6. Mine frontendi kausta
 -cd C:\Users\kundr\Desktop\WorkoutTracker\workout-frontend
 
 # 7. Lae React paketid
