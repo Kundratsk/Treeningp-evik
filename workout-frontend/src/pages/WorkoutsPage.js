@@ -114,7 +114,7 @@ export default function WorkoutsPage() {
         <div className="spinner"> Laadin...</div>
       ) : workouts.length === 0 ? (
         <div className="empty-state">
-          <div className="empty-state-icon">🏃</div>
+          <div className="empty-state-icon"></div>
           <p>Treeninguid ei leitud. Lisa esimene treening!</p>
         </div>
       ) : (
