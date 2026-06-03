@@ -15,7 +15,7 @@ export default function StatsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="spinner">⏳ Laadin statistikat...</div>;
+  if (loading) return <div className="spinner"> Laadin statistikat...</div>;
   if (!stats) return <div className="empty-state">Statistikat ei leitud.</div>;
 
   return (

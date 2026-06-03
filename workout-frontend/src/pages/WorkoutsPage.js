@@ -46,7 +46,7 @@ export default function WorkoutsPage() {
     setFormLoading(true);
     try {
       await createWorkout(data);
-      toast.success('Treening lisatud! 💪');
+      toast.success('Treening lisatud! ');
       setShowModal(false);
       setPage(1);
       fetchWorkouts();
@@ -127,7 +127,7 @@ export default function WorkoutsPage() {
                   <span>📅 {new Date(w.date).toLocaleDateString('et-EE')}</span>
                   <span>⏱ {w.durationMinutes} min</span>
                   <span>🔥 {w.caloriesBurned} kcal</span>
-                  {w.exercises?.length > 0 && <span>💪 {w.exercises.length} harjutust</span>}
+                  {w.exercises?.length > 0 && <span> {w.exercises.length} harjutust</span>}
                 </div>
                 <span className={`badge ${getBadgeClass(w.category)}`} style={{ marginTop: '0.4rem' }}>{w.category}</span>
               </div>
@@ -160,7 +160,7 @@ export default function WorkoutsPage() {
         <div className="modal-overlay" onClick={e => e.target === e.currentTarget && setShowModal(false)}>
           <div className="modal">
             <div className="modal-header">
-              <h2>➕ Lisa uus treening</h2>
+              <h2> Lisa uus treening</h2>
               <button className="modal-close" onClick={() => setShowModal(false)}>×</button>
             </div>
             <WorkoutForm onSubmit={handleCreate} onCancel={() => setShowModal(false)} loading={formLoading} />
@@ -173,7 +173,7 @@ export default function WorkoutsPage() {
         <div className="modal-overlay" onClick={e => e.target === e.currentTarget && setEditWorkout(null)}>
           <div className="modal">
             <div className="modal-header">
-              <h2>✏️ Muuda treeningut</h2>
+              <h2>Muuda treeningut</h2>
               <button className="modal-close" onClick={() => setEditWorkout(null)}>×</button>
             </div>
             <WorkoutForm
@@ -208,7 +208,7 @@ export default function WorkoutsPage() {
               <div><span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Kategooria</span><br /><span className={`badge ${getBadgeClass(detailWorkout.category)}`}>{detailWorkout.category}</span></div>
               <div><span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Kalorid</span><br />{detailWorkout.caloriesBurned} kcal</div>
             </div>
-            {detailWorkout.notes && <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>📝 {detailWorkout.notes}</p>}
+            {detailWorkout.notes && <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}> {detailWorkout.notes}</p>}
             {detailWorkout.exercises?.length > 0 && (
               <div className="exercise-list">
                 <strong style={{ fontSize: '0.9rem' }}>Harjutused:</strong>
@@ -232,7 +232,7 @@ export default function WorkoutsPage() {
         <div className="modal-overlay">
           <div className="modal" style={{ maxWidth: 400 }}>
             <div className="modal-header">
-              <h2>🗑️ Kustuta treening</h2>
+              <h2> Kustuta treening</h2>
             </div>
             <p>Kas oled kindel, et soovid kustutada treeningut <strong>"{confirmDelete.title}"</strong>? Seda tegevust ei saa tagasi võtta.</p>
             <div className="modal-footer">

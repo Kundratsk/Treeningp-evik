@@ -13,7 +13,7 @@ export default function App() {
       <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
 
       <nav className="navbar">
-        <div className="navbar-brand">🏋️ Treeningpäevik</div>
+        <div className="navbar-brand"> Treeningpäevik</div>
         <div className="navbar-actions">
           <button
             className={`nav-btn ${activePage === 'workouts' ? 'active' : ''}`}
@@ -25,10 +25,10 @@ export default function App() {
             className={`nav-btn ${activePage === 'stats' ? 'active' : ''}`}
             onClick={() => setActivePage('stats')}
           >
-            📊 Statistika
+             Statistika
           </button>
           <button className="nav-btn" onClick={toggleTheme}>
-            {theme === 'light' ? '🌙 Tume' : '☀️ Hele'}
+            {theme === 'light' ? ' Tume' : ' Hele'}
           </button>
         </div>
       </nav>
